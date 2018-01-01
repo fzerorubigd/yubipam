@@ -275,15 +275,3 @@ pam_sm_close_session (pam_handle_t * pamh,
 }
 
 
-#ifdef PAM_STATIC
-struct pam_module _pam_yubikey_modstruct = {
-    "pam_yubikey",
-    pam_sm_authenticate,
-    pam_sm_setcred,
-    NULL,
-    pam_sm_open_session,
-    pam_sm_close_session,
-    NULL
-};
-#endif
-
